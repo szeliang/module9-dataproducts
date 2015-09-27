@@ -19,7 +19,7 @@ set.seed(3456)
 t <- createDataPartition(y=data$RTEN,p=0.7,list=FALSE)
 training <- data[t,]
 testing <- data[-t,]
-fit <- train(RTEN~.,data=data,method="rf",prox=FALSE)
+fit <- train(RTEN~.,data=training,method="rf",prox=FALSE)
 
 shinyServer(
     function(input, output) {
