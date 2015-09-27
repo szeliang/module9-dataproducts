@@ -856,7 +856,7 @@ data$RTEN &lt;- as.factor(data$RTEN)
 <div class="slideContent" >
 <p>Random forest method was used to train a prediction algorithm with accuracies &gt;90%.</p>
 
-<pre><code class="r">fit &lt;- train(RTEN~.,data=data,method=&quot;rf&quot;,prox=FALSE)
+<pre><code class="r">fit &lt;- train(RTEN~.,data=training,method=&quot;rf&quot;,prox=FALSE)
 confusionMatrix(predict(fit,testing),testing$RTEN)
 </code></pre>
 
